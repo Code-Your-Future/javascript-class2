@@ -1,7 +1,6 @@
 // code here
 var secretPhrase = "supermachineopen";
 var menu = [""]; 
-
 var vendorMachineServe = function(passCode){
 	if(passCode === secretPhrase){
 		menu.push("cheesecake","pizza","coke");
@@ -25,13 +24,11 @@ var orderServe = function(){
 		break;
 		default:
 			alert("Wrong choice, Please choose from 1 to 3 ");
-	}
-	
+	}	
 }
 
 while(confirm("Wellcome to the Magic Vendor Machine, do you want to continue....?")){
 	var code = prompt("Please enter the pass code");
 	vendorMachineServe(code);
-
 }
 	console.log("Goodbye!");
