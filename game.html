@@ -1,0 +1,37 @@
+
+<!doctype html>
+<html>
+<head>
+	<title>Tie Loose Game</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script  src="rock_scissor_paper_assignment.js" type="text/javascript" ></script>
+</head>
+<body>
+	<section>
+		<header>
+			<h1>Game</h1>
+		</header>
+		<article class="userChoice">
+			<form>
+				<input type="radio" value="0" name="group1" checked on> Rock
+				<input type="radio" value="1" name="group1"> Scissors
+				<input type="radio" value="2" name="group1" > Paper </br>
+				<button id="btnPlay" onclick="play('group1')" class="btn button">Play</button>
+			</form>
+		</article>
+
+		<article class="resultSection">
+			<div class="resultImage">
+				<img id="imgUser" >
+				<img id="imgComp" >
+			</div>
+			<div>
+				<h3 id="info"  ><h3/>
+				<h3 id="score" ><h3/>
+				<h5 id="round" ><h5/>
+			</div>
+		</article>
+	</section>
+	<script type="text/javascript" src="rock_scissor_paper_assignment.js"></script>
+</body>
+</html>
