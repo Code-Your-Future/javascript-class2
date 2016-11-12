@@ -1,9 +1,28 @@
 
 var computerChoice;
-var imageList = ["img/rock.png","img/scissors.png","img/paper.png"];
+var score = 0;
+var round = 1;
+var imageList = ["images/rock.png","images/scissors.png","images/paper.png"];
 
 function play(usrOptGroupName){
-	com(getUserChoice(usrOptGroup), getComputerChoice();)
+	if(round!=4){
+		compare	(getUserChoice(usrOptGroupName), getComputerChoice());
+		document.getElementById("round").innerHTML = "Round : "+round;
+		round++;
+	}else{
+		alert("Round completed, restarting ... the game");
+		clearFilds()
+	}
+}
+
+function clearFilds(){
+	score=0;
+	round=0;
+	document.getElementById("info").innerHTML ="";
+	document.getElementById("score").innerHTML ="";
+	document.getElementById("round").innerHTML ="";
+	document.getElementById("imgUser").innerHTML ="src =''" ;
+	document.getElementById("imgComp").innerHTML ="src =''" ;
 }
 
 function getUserChoice(optName){
@@ -20,45 +39,49 @@ function getUserChoice(optName){
 }
 
 function getComputerChoice(){
-	var = parseFloat(Math.random().toFixed(2));
+	
+	computerChoice= parseFloat(Math.random().toFixed(2));
 
 	if (computerChoice > 0 && computerChoice < 0.33){
-		document.write(".pic1 img").attr("src","img/rock.png");
-		/*$("div.wrap2 h1").text("Paper beats rock").hide().fadeIn();
-		userPoint = userPoint+10;*/
 		computerChoice = 0;
-	}
 	}else if (computerChoice > 0.34 && computerChoice < 0.66){
-		/*$(".pic1 img").attr("src","img/scissors.png").hide().fadeIn();	
-		$("div.wrap2 h1").text("Rock beats Scissors").hide().fadeIn();
-		userPoint = userPoint+10;*/
 		computerChoice = 1;
 	}else if(computerChoice > 0.67 && computerChoice < 1){
-		/*$(".pic1 img").attr("src","img/paper.png").hide().fadeIn();
-		$("div.wrap2 h1").text("Scissors beats paper").hide().fadeIn();
-		userPoint = userPoint+10;*/
 		computerChoice = 2;
 	}else{
 
 	}
+	
 	return computerChoice;
 }
 
 function compare(userChoice,computerChoice){
 	
 	if (userChoice === 2 && computerChoice ===0){
-
+		getImage(userChoice, computerChoice);
+		document.getElementById("info").innerHTML ="User Win!...";
+		document.getElementById("score").innerHTML ="Your score : " + score + 10;
 	}else if (userChoice === 0 && computerChoice ===1){
-
+		getImage(userChoice, computerChoice);
+		document.getElementById("info").innerHTML ="User Win!...";
+		document.getElementById("score").innerHTML ="Your score : " + score + 10 ;
 	}else if (userChoice === 1 && computerChoice ===2){
-
-	}else {
-		//computer win;
+		getImage(userChoice, computerChoice);
+		document.getElementById("info").innerHTML ="User Win!...";
+		document.getElementById("score").innerHTML ="Your score : " + score + 10;
+	}else if (userChoice === computerChoice) {
+		document.getElementById("info").innerHTML ="Tie...";
+	}else{
+		document.getElementById("info").innerHTML ="Computer Win...";
+		document.getElementById("score").innerHTML ="Your score : " + score;
 	}
 
 }
-/*
-function getImage(imageId1, imageId2){
-	return imageList[imageId1];
+
+function getImage(imgIdUser, imgIdComp){
+	var imageUser = document.getElementById("imgUser");
+	var imageComp = document.getElementById("imgComp");
+	imageUser.innerHTML=" src=" + imageList[imgIdUser];
+	imageComp.innerHTML=" src=" + imageList[imgIdComp];
 }
 
