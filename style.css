@@ -1,0 +1,57 @@
+
+body{
+	margin:0 auto;
+}
+section {
+	position: absolute;
+	width:40%;
+	height: 40%;
+	top: 20%;
+	left:30%;
+
+}
+
+section header {
+	background-color: #4f4b4b; 
+	height: 20%;
+	position: relative;
+	margin-top: 0%;
+
+}
+section header h1{
+	color: #fcf7f7;
+	float: right;
+	font-weight: bold;
+	margin-top: 10px;
+	padding:2px 20px 10px;
+
+
+}
+section article.userChoice{
+	margin-top: 1%;
+	margin-bottom: 2%;
+	border: 1px solid black;
+	border-radius: 1em;
+}
+section article form{
+	margin-left: 30%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+section article.resultSection{
+	margin:10px; 
+	margin-left: 30%;
+	border-style: 1px black solid;
+}
+
+.button {
+ 	background-color: #4f4b4b;
+    color: white;
+    border: 2px solid #4f4b4b; /* Green */
+    border-radius: 1em; 
+    width: 200px;
+    height: 30px;
+    margin-left: 5px;
+    margin-top: 5px;
+    font-weight: bold;
+}

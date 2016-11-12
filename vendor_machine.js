@@ -30,7 +30,7 @@ var orderServe = function(){
 }
 
 while(confirm("Wellcome to the Magic Vendor Machine, do you want to continue....?")){
-	var code = prompt("Please enter the pass code");
+	var code = prompt("Please enter the pass code","fasdf");
 	vendorMachineServe(code);
 
 }
