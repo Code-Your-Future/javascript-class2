@@ -5,7 +5,7 @@ vendorMachineServe (userPhrase);
 function vendorMachineServe (userPhrase) {
     if(userPhrase===secretPhrase){
         var userOption=parseInt(prompt("can you please select your order number from the list:\n1-cheesecake\n2-pizza \n3-cook?"));
-        showinResult(userOption);
+        printingResult(userOption);
     }else{
         console.log("Oh no, you don't know the secret.");
     }
