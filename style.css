@@ -1,0 +1,30 @@
+body {
+    background-color: #348CAE;
+    color: white;
+}
+.wrap1 {
+  width: 200px;
+  margin: 10px auto;
+}
+.wrap2 {
+  background-color: #0D0A3C;
+  width: 400px;
+  height: 300px;
+  margin: auto;
+}
+
+#pic1 img {
+  transform: rotate(180deg);
+}
+
+#player-result  {
+  height: 20px;
+}
+#computer-result {
+  height: 20px;
+}
+#screening {
+  position: relative;
+  left:100px;
+  top:-200px;
+}
