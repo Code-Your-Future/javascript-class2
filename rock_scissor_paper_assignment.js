@@ -1,50 +1,40 @@
-var userTurn = prompt('Please choose rock, paper or scissors');
-var computerTurn = Math.random ();
-if (computerTurn <= 0.33) {
-	computerTurn = 'rock';
+var userChoice = prompt("Do you choose rock, paper or scissors?");
+var computerChoice = Math.random();
+if(computerChoice <= 0.34) {
+	computerChoice = "rock";
+} else if (computerChoice <= 0.67) {
+	computerChoice = "paper";
+} else {
+	computerChoice = "scissors";
 }
-else if (0.34 <= computerTurn <= 0.66) {
-	computerTurn = 'scissors';
-}
-else {
-	computerTurn = 'paper';
-}
-
-turn1 = userTurn;
-turn2 = computerTurn;
-
-function compare(turn1, turn2) {
-	if (turn1 === turn2) {
-		return('The result is a tie!');
+console.log("Computer: " + computerChoice);
+var compare = function(choice1, choice2) {
+	if (choice1 === choice2) {
+		return "The result is a tie!";
 	}
-
-	if (turn1 === 'rock') {
-		if (turn2 === 'scissors') {
-			return('rock beats scissors');
+	if (choice1 === "rock") {
+		if (choice2 === "scissors") {
+			return "rock wins";
 		}
 		else {
-			return('paper wins');
+			return "paper wins";
 		}
 	}
-
-	if (turn1 === 'paper') {
-		if (turn2 === 'rock') {
-			return('paper beats rock');
+	if (choice1 === "paper") {
+		if (choice2 === "rock") {
+			return "paper wins";
 		}
 		else {
-			return('scissors wins');
+			return "scissors wins";
 		}
 	}
-
-	if (turn1 === 'scissors') {
-		if (turn2 === 'rock') {
-			return('rock beats scissors');
+	if (choice1 === "scissors") {
+		if (choice2 === "rock") {
+			return "rock wins";
 		}
 		else {
-			return('scissors wins');
+			return "scissors wins";
 		}
-		
 	}
-}
-
-document.write(compare(turn1,turn2));
+};
+compare(userChoice, computerChoice);
